@@ -59,8 +59,8 @@
     <li>git branch [branch-name]: 新建一个分支，但依然停留在当前分支</li>
     <li>git checkout [branch-name]: 切换到指定分支，并更新工作区</li>
     <li>git checkout -b [branch-name]: 新建一个分支，并切换到这个新建的分支</li>
-    <li>git branch --track [branch] [remote-branch]: 新建一个分支，并与指定远程分支建立追踪关系</li>
-    <li>git branch --set-upstream-to [branch] [remote-branch]: 将现有的指定分支与远程分支建立追踪关系</li>
+    <li>git branch --track [remote-branch] [branch]: 新建一个分支，并与指定远程分支建立追踪关系</li>
+    <li>git branch --set-upstream-to [remote-branch] [branch]: 将现有的指定分支与远程分支建立追踪关系</li>
     <li>git checkout -: 切换到上一分支</li>
     <li>git merge [branch]: 合并指定分支到当前分支</li>
     <li>git cherry-pick [commit]: 选择一个commit，合并进当前分支</li>
@@ -82,14 +82,19 @@
 
   <h3>撤销</h3>
   <ul>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
+    <li>git checkout [commit] [file]: 恢复暂存区的指定文件到工作区</li>
+  </ul>
+
+  <h3>储藏</h3>
+  <ul>
+    <li>git stash: 储藏</li>
+    <li>git stash list: 查看现有的储藏</li>
+    <li>git stash apply [stash@{0}}: 应用储藏(但是被暂存的文件没有重新被暂存)</li>
+    <li>git stash apply --index: 应用储藏(在运行 git stash apply 命令时带上一个 --index 的选项来告诉命令重新应用被暂存的变更)</li>
+    <li>git stash show -p [stash@{0}] | git apply -R: 取消储藏</li>
+    <li>git stash drop</li>
+    <li>git stash pop: 重新应用储藏，同时立刻将其从堆栈中移走</li>
+    <li>git stash branch [branch]:从储藏中创建分支，检出你储藏工作时的所处的提交，重新应用你的工作，如果成功，将会丢弃储藏。</li>
   </ul>
 </body>
 </html>
