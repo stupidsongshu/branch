@@ -92,8 +92,8 @@
     <li>git stash apply [stash@{0}}: 应用储藏(但是被暂存的文件没有重新被暂存)</li>
     <li>git stash apply --index: 应用储藏(在运行 git stash apply 命令时带上一个 --index 的选项来告诉命令重新应用被暂存的变更)</li>
     <li>git stash show -p [stash@{0}] | git apply -R: 取消储藏</li>
-    <li>git stash drop</li>
-    <li>git stash pop: 重新应用储藏，同时立刻将其从堆栈中移走</li>
+    <li>git stash drop: 删除指定储藏内容</li>
+    <li>git stash pop: 恢复并删除指定储藏内容</li>
     <li>git stash branch [branch]:从储藏中创建分支，检出你储藏工作时的所处的提交，重新应用你的工作，如果成功，将会丢弃储藏。</li>
   </ul>
 </body>
